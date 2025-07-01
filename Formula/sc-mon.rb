@@ -5,29 +5,29 @@
 class ScMon < Formula
   desc "sc-mon monitors the status of a Snapchain node."
   homepage "https://github.com/vrypan/sc-mon"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.2/sc-mon_Darwin_x86_64.tar.gz",
+      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.3/sc-mon_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "b6261b6e72922aceecc5940ec8cdfeea91af246d4f95317b8da2ceb340b87e8d"
+      sha256 "b1224da48ca51766c3c3930789eaa0618e93c1659e41b99e9b56c75107f3607d"
 
       def install
         bin.install "sc-mon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.2/sc-mon_Darwin_arm64.tar.gz",
+      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.3/sc-mon_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "204ce296ebc489e56e2047591bb064b646541dcc9da09133e50ba019e0811352"
+      sha256 "0f654a4259efae022d6841047d795d5eaf9e151680dc9a3c20e3319b5d929bff"
 
       def install
         bin.install "sc-mon"
@@ -37,23 +37,23 @@ class ScMon < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.2/sc-mon_Linux_x86_64.tar.gz",
+      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.3/sc-mon_Linux_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "491c2e8d925ff652442c8e8b65e00d35da764eaebdae3cc34065680015b83805"
+      sha256 "1894737962c8a741b837093fc8cfb3a160b4933ddfe36dadb4982cab1080aebf"
       def install
         bin.install "sc-mon"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.2/sc-mon_Linux_arm64.tar.gz",
+      url "https://github.com/vrypan/sc-mon/releases/download/v0.1.3/sc-mon_Linux_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "e3d52f0999094558f41d9d5fdb5884876a5cfb377ca61b17108d75e7befcc10b"
+      sha256 "07e9cd1b6016a111cd18440ffb969351382969cb584e5dae71b9ee5ef21c4349"
       def install
         bin.install "sc-mon"
       end
